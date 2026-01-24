@@ -39,7 +39,7 @@ const Hero = () => {
           </p>
           
           <p className="text-lg text-muted-foreground mb-10 max-w-2xl mx-auto">
-            Fostering developer community growth in Mumbai and India
+            Foster Community Growth for Apple Platform Developers in Mumbai and India 🇮🇳
           </p>
           
           <motion.div
@@ -49,18 +49,20 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <a
-              href="https://twitter.com/swift_mumbai"
+              href="https://lu.ma/swiftmumbai"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 bg-gradient-swift text-primary-foreground font-semibold rounded-xl transition-all hover:shadow-glow hover:scale-105"
             >
-              Join the Community
+              View Upcoming Events
             </a>
             <a
-              href="#about"
+              href="https://chat.whatsapp.com/Gszg4xLSDvTFhlfSGFfK0x"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 bg-secondary text-secondary-foreground font-semibold rounded-xl border border-border transition-all hover:bg-muted hover:scale-105"
             >
-              Learn More
+              Join WhatsApp Group
             </a>
           </motion.div>
         </motion.div>

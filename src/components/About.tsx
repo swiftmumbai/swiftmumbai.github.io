@@ -1,28 +1,28 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Users, Code, Palette, GraduationCap } from "lucide-react";
+import { Users, Code, Mic, Github } from "lucide-react";
 
-const audiences = [
-  {
-    icon: Code,
-    title: "Developers",
-    description: "iOS, macOS, watchOS, and tvOS developers building amazing apps",
-  },
-  {
-    icon: Palette,
-    title: "Designers",
-    description: "UI/UX designers crafting beautiful Apple platform experiences",
-  },
+const activities = [
   {
     icon: Users,
-    title: "Indies",
-    description: "Independent developers building their dreams and businesses",
+    title: "In-Person Meetups",
+    description: "Regular gatherings where developers share talks on Swift, SwiftUI, iOS architecture, tooling, and real-world case studies.",
   },
   {
-    icon: GraduationCap,
-    title: "Students",
-    description: "Future developers learning and growing in the ecosystem",
+    icon: Mic,
+    title: "Talks & Workshops",
+    description: "Sessions ranging from beginner-friendly introductions to deep dives into frameworks, libraries, and best practices.",
+  },
+  {
+    icon: Github,
+    title: "Open Source",
+    description: "Through our GitHub organisation we maintain community projects, giving members a place to learn in public and contribute.",
+  },
+  {
+    icon: Code,
+    title: "Community Support",
+    description: "Our WhatsApp group and social channels are active spaces for questions, opportunities, and discussions around Apple platforms.",
   },
 ];
 
@@ -40,15 +40,15 @@ const About = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Built for <span className="text-gradient-swift">Everyone</span>
+            What We <span className="text-gradient-swift">Do</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Whether you're a seasoned developer or just starting out, Swift Mumbai is your home for learning, connecting, and growing.
+            We bring together iOS, macOS, watchOS, tvOS, and Swift developers for meetups, talks, workshops, and community projects.
           </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {audiences.map((item, index) => (
+          {activities.map((item, index) => (
             <motion.div
               key={item.title}
               className="bg-gradient-card p-8 rounded-2xl border border-border transition-all hover:shadow-glow-sm hover:border-primary/30 group"
