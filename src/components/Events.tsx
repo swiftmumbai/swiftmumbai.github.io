@@ -1,38 +1,42 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Calendar, MapPin, Sparkles } from "lucide-react";
 
 const events = [
   {
     title: "Spatially Xtended",
-    description: "India's biggest visionOS meetup with 100+ attendees, in collaboration with KJ Somaiya University, XDG Mumbai and Parallax Labs. Focusing on Apple Vision Pro, Spatial Computing and visionOS.",
+    description: "India's biggest visionOS meetup with 100+ attendees. Focusing on Apple Vision Pro, Spatial Computing and visionOS.",
     highlight: "100+ Attendees",
     icon: "🥽",
+    collab: "KJ Somaiya • XDG Mumbai • Parallax Labs"
   },
   {
     title: "Build Beyond Screens",
-    description: "Student-focused meetups in collaboration with XDG Mumbai, covering Swift Student Challenge, AI, VR, and AR development.",
+    description: "Student-focused meetups covering Swift Student Challenge, AI, VR, and AR development.",
     highlight: "For Students",
     icon: "🎓",
+    collab: "XDG Mumbai"
   },
   {
     title: "Sip N Swift",
     description: "Invite-only meetups for loyal attendees and community contributors. We banter, sip coffee, and have swift conversations.",
     highlight: "13+ Sessions",
     icon: "☕",
+    collab: "Exclusive Community Event"
   },
   {
-    title: "WWDC Watch Parties",
-    description: "Live streaming WWDC keynotes from Cupertino with the community. Our 2025 edition was in collaboration with BookMyShow Engineering.",
-    highlight: "Live from Cupertino",
+    title: "WWDC Watch Party",
+    description: "Live streaming WWDC keynotes from Cupertino with the community. Experience Apple's announcements together.",
+    highlight: "Live Events",
     icon: "📺",
+    collab: "BookMyShow Engineering"
   },
   {
-    title: "Google I/O x WWDC",
-    description: "Cross-community events in collaboration with GDG MAD, discussing AI innovations and platform releases from both Apple and Google.",
-    highlight: "With GDG MAD",
+    title: "Google I/O × WWDC",
+    description: "Cross-community events discussing AI innovations and platform releases from both Apple and Google.",
+    highlight: "Collaboration",
     icon: "🤝",
+    collab: "GDG MAD • Shaadi.com"
   },
 ];
 
@@ -41,49 +45,80 @@ const Events = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="py-24 bg-card" ref={ref}>
+    <section className="section-padding bg-card/30" ref={ref}>
       <div className="container mx-auto px-6">
+        {/* Header */}
         <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
+          className="text-center max-w-3xl mx-auto mb-20"
+          initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Our <span className="text-gradient-swift">Events</span>
+          <h2 className="display-md mb-6">
+            Our <span className="text-gradient-swift">events</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            From casual coffee chats to large-scale conferences, we bring developers together in meaningful ways.
+          <p className="body-lg">
+            From casual coffee chats to large-scale conferences, 
+            we bring developers together in meaningful ways.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Events List */}
+        <div className="max-w-4xl mx-auto space-y-4">
           {events.map((event, index) => (
             <motion.div
               key={event.title}
-              className="relative bg-background p-8 rounded-2xl border border-border overflow-hidden group hover:border-primary/30 transition-all"
-              initial={{ opacity: 0, y: 30 }}
+              className="group relative p-6 md:p-8 rounded-2xl bg-background/50 border border-border/50 transition-all duration-500 hover:bg-background hover:border-primary/20"
+              initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: index * 0.15 }}
+              transition={{ 
+                duration: 0.6, 
+                delay: 0.1 + index * 0.08,
+                ease: [0.25, 0.1, 0.25, 1]
+              }}
             >
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-swift opacity-5 blur-3xl group-hover:opacity-10 transition-opacity" />
-              
-              <span className="text-5xl mb-6 block">{event.icon}</span>
-              
-              <div className="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-semibold rounded-full mb-4">
-                {event.highlight}
+              <div className="flex items-start gap-6">
+                <span className="text-4xl flex-shrink-0">{event.icon}</span>
+                <div className="flex-1 min-w-0">
+                  <div className="flex flex-wrap items-center gap-3 mb-2">
+                    <h3 className="text-xl font-semibold text-foreground">
+                      {event.title}
+                    </h3>
+                    <span className="px-3 py-1 text-xs font-medium text-primary bg-primary/10 rounded-full">
+                      {event.highlight}
+                    </span>
+                  </div>
+                  <p className="text-muted-foreground mb-3 leading-relaxed">
+                    {event.description}
+                  </p>
+                  <p className="text-sm text-muted-foreground/70">
+                    {event.collab}
+                  </p>
+                </div>
               </div>
-              
-              <h3 className="text-2xl font-bold mb-4 text-foreground">
-                {event.title}
-              </h3>
-              
-              <p className="text-muted-foreground leading-relaxed">
-                {event.description}
-              </p>
             </motion.div>
           ))}
         </div>
+
+        {/* CTA */}
+        <motion.div 
+          className="text-center mt-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.6 }}
+        >
+          <a
+            href="https://lu.ma/swiftmumbai"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center text-primary font-medium transition-colors hover:text-primary/80"
+          >
+            View all events on Luma
+            <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </motion.div>
       </div>
     </section>
   );
