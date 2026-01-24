@@ -5,22 +5,34 @@ import { Calendar, MapPin, Sparkles } from "lucide-react";
 
 const events = [
   {
-    title: "Sip Swift",
-    description: "Casual meetups over coffee where developers share ideas, discuss Swift, and network in a relaxed environment.",
-    highlight: "13+ editions",
-    icon: "☕",
-  },
-  {
-    title: "VisionOS Meetups",
-    description: "India's biggest visionOS meetups exploring spatial computing, AR/VR, and the future of Apple platforms.",
-    highlight: "India's Largest",
+    title: "Spatially Xtended",
+    description: "India's biggest visionOS meetup with 100+ attendees, in collaboration with KJ Somaiya University, XDG Mumbai and Parallax Labs. Focusing on Apple Vision Pro, Spatial Computing and visionOS.",
+    highlight: "100+ Attendees",
     icon: "🥽",
   },
   {
-    title: "Spatially Xtended",
-    description: "Deep-dive sessions into spatial computing with hands-on workshops and expert speakers.",
-    highlight: "With XDG Mumbai",
-    icon: "✨",
+    title: "Build Beyond Screens",
+    description: "Student-focused meetups in collaboration with XDG Mumbai, covering Swift Student Challenge, AI, VR, and AR development.",
+    highlight: "For Students",
+    icon: "🎓",
+  },
+  {
+    title: "Sip N Swift",
+    description: "Invite-only meetups for loyal attendees and community contributors. We banter, sip coffee, and have swift conversations.",
+    highlight: "13+ Sessions",
+    icon: "☕",
+  },
+  {
+    title: "WWDC Watch Parties",
+    description: "Live streaming WWDC keynotes from Cupertino with the community. Our 2025 edition was in collaboration with BookMyShow Engineering.",
+    highlight: "Live from Cupertino",
+    icon: "📺",
+  },
+  {
+    title: "Google I/O x WWDC",
+    description: "Cross-community events in collaboration with GDG MAD, discussing AI innovations and platform releases from both Apple and Google.",
+    highlight: "With GDG MAD",
+    icon: "🤝",
   },
 ];
 
@@ -45,7 +57,7 @@ const Events = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {events.map((event, index) => (
             <motion.div
               key={event.title}

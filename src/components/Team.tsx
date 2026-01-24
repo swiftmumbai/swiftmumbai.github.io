@@ -5,12 +5,12 @@ import { useRef } from "react";
 const team = [
   {
     name: "Yogesh Singh",
-    title: "Diehard Napoli Fan",
+    title: "Originator",
     initials: "YS",
   },
   {
     name: "Akanksha Sharma",
-    title: "Wonder Woman",
+    title: "Senior Madam / SuperMom",
     initials: "AS",
   },
   {
@@ -20,12 +20,12 @@ const team = [
   },
   {
     name: "Rushit Rakhasiya",
-    title: "Excited Guy!",
+    title: "Chief Excited Officer",
     initials: "RK",
   },
   {
     name: "Nishant Desai",
-    title: "Human LLM",
+    title: "Human LLM / Tech Legend",
     initials: "ND",
   },
 ];
