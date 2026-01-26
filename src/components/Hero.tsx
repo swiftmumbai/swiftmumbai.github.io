@@ -32,11 +32,13 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
           >
             <div className="absolute inset-0 blur-3xl bg-primary/20 scale-150" />
-            <img
-              src={logo}
-              alt="Swift Mumbai"
-              className="relative w-24 h-24 md:w-32 md:h-32"
-            />
+            <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full bg-background overflow-hidden">
+              <img
+                src={logo}
+                alt="Swift Mumbai"
+                className="w-full h-full object-cover"
+              />
+            </div>
           </motion.div>
           
           {/* Main headline */}
