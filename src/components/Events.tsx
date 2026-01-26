@@ -2,41 +2,52 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 
+import spatiallyImg from "@/assets/events/spatially-xtended.png";
+import buildBeyondImg from "@/assets/events/build-beyond-screens.png";
+import sipnswiftImg from "@/assets/events/sipnswift.png";
+import wwdcImg from "@/assets/events/wwdc25watchparty.png";
+import gdgCollabImg from "@/assets/events/gdg-collab.png";
+
 const events = [
   {
     title: "Spatially Xtended",
     description: "India's biggest visionOS meetup with 100+ attendees. Focusing on Apple Vision Pro, Spatial Computing and visionOS.",
     highlight: "100+ Attendees",
     icon: "🥽",
-    collab: "KJ Somaiya • XDG Mumbai • Parallax Labs"
+    collab: "KJ Somaiya • XDG Mumbai • Parallax Labs",
+    image: spatiallyImg,
   },
   {
     title: "Build Beyond Screens",
     description: "Student-focused meetups covering Swift Student Challenge, AI, VR, and AR development.",
     highlight: "120+ Attendees",
     icon: "🎓",
-    collab: "Atlas SkillTech University • XDG Mumbai"
+    collab: "Atlas SkillTech University • XDG Mumbai",
+    image: buildBeyondImg,
   },
   {
     title: "Sip N Swift",
     description: "Invite-only meetups for loyal attendees and community contributors. We banter, sip coffee, and have swift conversations.",
     highlight: "13+ Sessions",
     icon: "☕",
-    collab: "Exclusive Community Event"
+    collab: "Exclusive Community Event",
+    image: sipnswiftImg,
   },
   {
     title: "WWDC Watch Party 2025",
     description: "Live streaming WWDC keynotes from Cupertino with the community. Experience Apple's announcements together.",
     highlight: "Live Events",
     icon: "📺",
-    collab: "BookMyShow Engineering"
+    collab: "BookMyShow Engineering",
+    image: wwdcImg,
   },
   {
     title: "Google I/O × WWDC",
     description: "Cross-community events discussing AI innovations and platform releases from both Apple and Google.",
     highlight: "Collaboration",
     icon: "🤝",
-    collab: "GDG MAD • Shaadi.com"
+    collab: "GDG MAD • Shaadi.com",
+    image: gdgCollabImg,
   },
 ];
 
@@ -63,12 +74,12 @@ const Events = () => {
           </p>
         </motion.div>
 
-        {/* Events List */}
-        <div className="max-w-4xl mx-auto space-y-4">
+        {/* Events Grid */}
+        <div className="max-w-6xl mx-auto space-y-8">
           {events.map((event, index) => (
             <motion.div
               key={event.title}
-              className="group relative p-6 md:p-8 rounded-2xl bg-background/50 border border-border/50 transition-all duration-500 hover:bg-background hover:border-primary/20"
+              className="group relative rounded-3xl bg-background/50 border border-border/50 overflow-hidden transition-all duration-500 hover:bg-background hover:border-primary/20"
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ 
@@ -77,20 +88,33 @@ const Events = () => {
                 ease: [0.25, 0.1, 0.25, 1]
               }}
             >
-              <div className="flex items-start gap-6">
-                <span className="text-4xl flex-shrink-0">{event.icon}</span>
-                <div className="flex-1 min-w-0">
-                  <div className="flex flex-wrap items-center gap-3 mb-2">
-                    <h3 className="text-xl font-semibold text-foreground">
-                      {event.title}
-                    </h3>
+              <div className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+                {/* Image */}
+                <div className="md:w-1/2 aspect-video md:aspect-auto overflow-hidden">
+                  <img 
+                    src={event.image} 
+                    alt={event.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
+
+                {/* Content */}
+                <div className="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                  <div className="flex items-center gap-4 mb-4">
+                    <span className="text-4xl">{event.icon}</span>
                     <span className="px-3 py-1 text-xs font-medium text-primary bg-primary/10 rounded-full">
                       {event.highlight}
                     </span>
                   </div>
-                  <p className="text-muted-foreground mb-3 leading-relaxed">
+                  
+                  <h3 className="text-2xl md:text-3xl font-semibold text-foreground mb-4">
+                    {event.title}
+                  </h3>
+                  
+                  <p className="text-muted-foreground mb-6 leading-relaxed">
                     {event.description}
                   </p>
+                  
                   <p className="text-sm text-muted-foreground/70">
                     {event.collab}
                   </p>
