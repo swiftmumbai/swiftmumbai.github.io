@@ -5,7 +5,7 @@ import { useRef } from "react";
 const links = [
   {
     label: "Events",
-    href: "https://lu.ma/swiftmumbai",
+    href: "https://luma.com/user/swiftmumbai",
     description: "Upcoming meetups on Luma",
   },
   {
@@ -22,6 +22,16 @@ const links = [
     label: "Twitter",
     href: "https://twitter.com/swift_mumbai",
     description: "@swift_mumbai",
+  },
+  {
+    label: "Instagram",
+    href: "https://instagram.com/swift_mumbai",
+    description: "@swift_mumbai",
+  },
+  {
+    label: "YouTube",
+    href: "https://www.youtube.com/@SwiftMumbai",
+    description: "Watch talks & sessions",
   },
   {
     label: "LinkedIn",

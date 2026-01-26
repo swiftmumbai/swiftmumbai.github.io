@@ -71,7 +71,7 @@ const Sponsors = () => {
             Interested in supporting the community?
           </p>
           <a
-            href="https://opencollective.com/swiftmumbai"
+            href="https://opencollective.com/swift-mumbai"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center text-primary font-medium transition-colors hover:text-primary/80"
