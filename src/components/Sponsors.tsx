@@ -9,6 +9,9 @@ const sponsors = [
   { name: "Shaadi.com", tier: "Partner" },
   { name: "KJ Somaiya", tier: "Venue Partner" },
   { name: "Parallax Labs", tier: "Partner" },
+  { name: "Atlas SkillTech University", tier: "Venue Partner" },
+  { name: "Riidl", tier: "Partner" },
+  { name: "Here Technologies", tier: "Partner" },
 ];
 
 const Sponsors = () => {

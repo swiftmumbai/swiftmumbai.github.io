@@ -13,9 +13,9 @@ const events = [
   {
     title: "Build Beyond Screens",
     description: "Student-focused meetups covering Swift Student Challenge, AI, VR, and AR development.",
-    highlight: "For Students",
+    highlight: "120+ Attendees",
     icon: "🎓",
-    collab: "XDG Mumbai"
+    collab: "Atlas SkillTech University • XDG Mumbai"
   },
   {
     title: "Sip N Swift",
@@ -25,7 +25,7 @@ const events = [
     collab: "Exclusive Community Event"
   },
   {
-    title: "WWDC Watch Party",
+    title: "WWDC Watch Party 2025",
     description: "Live streaming WWDC keynotes from Cupertino with the community. Experience Apple's announcements together.",
     highlight: "Live Events",
     icon: "📺",
@@ -108,7 +108,7 @@ const Events = () => {
           transition={{ duration: 0.6, delay: 0.6 }}
         >
           <a
-            href="https://lu.ma/swiftmumbai"
+            href="https://luma.com/user/swiftmumbai"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center text-primary font-medium transition-colors hover:text-primary/80"
