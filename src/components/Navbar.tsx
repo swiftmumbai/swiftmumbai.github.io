@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "@/assets/swift-mumbai-logo.png";
+import ThemeToggle from "./ThemeToggle";
 
 const navLinks = [
   { label: "About", href: "#about" },
-  { label: "Events", href: "https://lu.ma/swiftmumbai", external: true },
+  { label: "Events", href: "https://luma.com/user/swiftmumbai", external: true },
   { label: "GitHub", href: "https://github.com/swiftmumbai", external: true },
 ];
 
@@ -37,11 +38,13 @@ const Navbar = () => {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <a href="/" className="flex items-center gap-3 group">
-              <img 
-                src={logo} 
-                alt="Swift Mumbai" 
-                className="w-8 h-8 transition-transform duration-300 group-hover:scale-110" 
-              />
+              <div className="w-8 h-8 rounded-full bg-background overflow-hidden transition-transform duration-300 group-hover:scale-110">
+                <img 
+                  src={logo} 
+                  alt="Swift Mumbai" 
+                  className="w-full h-full object-cover" 
+                />
+              </div>
               <span className="font-semibold text-foreground hidden sm:block">
                 Swift Mumbai
               </span>
@@ -60,6 +63,7 @@ const Navbar = () => {
                   {link.label}
                 </a>
               ))}
+              <ThemeToggle />
               <a
                 href="https://chat.whatsapp.com/Gszg4xLSDvTFhlfSGFfK0x"
                 target="_blank"
