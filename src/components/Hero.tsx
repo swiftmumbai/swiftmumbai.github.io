@@ -1,38 +1,38 @@
 import { motion } from "framer-motion";
 import logo from "@/assets/swift-mumbai-logo.png";
+import FloatingBadges from "./FloatingBadges";
+import LogoMarquee from "./LogoMarquee";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Radial gradient background */}
-      <div className="absolute inset-0 bg-gradient-radial" />
-      
-      {/* Subtle grid pattern */}
+    <section className="relative min-h-screen flex flex-col justify-center overflow-hidden pt-16">
+      {/* Subtle dot pattern */}
       <div 
-        className="absolute inset-0 opacity-[0.02]"
+        className="absolute inset-0 opacity-[0.03]"
         style={{
-          backgroundImage: `linear-gradient(hsl(0 0% 50%) 1px, transparent 1px),
-                           linear-gradient(90deg, hsl(0 0% 50%) 1px, transparent 1px)`,
-          backgroundSize: '60px 60px'
+          backgroundImage: `radial-gradient(circle, hsl(var(--foreground)) 1px, transparent 1px)`,
+          backgroundSize: '24px 24px'
         }}
       />
       
+      {/* Floating role badges */}
+      <FloatingBadges />
+      
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 text-center max-w-5xl">
+      <div className="relative z-10 container mx-auto px-6 text-center max-w-4xl flex-1 flex flex-col justify-center">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
         >
-          {/* Logo with glow */}
+          {/* Logo */}
           <motion.div
-            className="relative inline-block mb-12"
+            className="relative inline-block mb-8"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            <div className="absolute inset-0 blur-3xl bg-primary/20 scale-150" />
-            <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full bg-background overflow-hidden">
+            <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-full bg-foreground overflow-hidden mx-auto shadow-lg">
               <img
                 src={logo}
                 alt="Swift Mumbai"
@@ -41,66 +41,56 @@ const Hero = () => {
             </div>
           </motion.div>
           
-          {/* Main headline */}
+          {/* Main headline with script accent */}
           <motion.h1 
-            className="display-xl mb-6"
+            className="text-4xl md:text-6xl lg:text-7xl font-semibold tracking-tight mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            <span className="text-gradient-white">Swift</span>{" "}
-            <span className="text-gradient-swift">Mumbai</span>
+            <span className="text-foreground">India's #1 </span>
+            <span className="text-gradient-swift font-script italic">Swift</span>
+            <br />
+            <span className="text-foreground">Developer Community</span>
           </motion.h1>
           
-          {/* Subheadline */}
-          <motion.p 
-            className="body-lg max-w-2xl mx-auto mb-4"
+          {/* CTA Button */}
+          <motion.div
+            className="mb-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            India's premier community for Apple platform developers.
-          </motion.p>
-
-          <motion.p 
-            className="text-lg text-muted-foreground/80 mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-          >
-            Fostering growth for iOS, macOS, watchOS, tvOS, and visionOS developers 🇮🇳
-          </motion.p>
-          
-          {/* CTA Buttons */}
-          <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            <a
-              href="https://luma.com/user/swiftmumbai"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group inline-flex items-center justify-center px-8 py-4 bg-foreground text-background font-medium rounded-full transition-all duration-300 hover:scale-105 hover:shadow-apple-lg"
-            >
-              View Events
-              <svg className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </a>
             <a
               href="https://chat.whatsapp.com/Gszg4xLSDvTFhlfSGFfK0x"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-8 py-4 text-primary font-medium rounded-full border border-primary/30 transition-all duration-300 hover:bg-primary/10 hover:border-primary/50"
+              className="group inline-flex items-center justify-center px-8 py-4 bg-foreground text-background font-medium rounded-full transition-all duration-300 hover:scale-105 hover:shadow-apple-lg"
             >
-              Join Community
+              Join Swift Mumbai
             </a>
           </motion.div>
+
+          {/* Subheadline */}
+          <motion.p 
+            className="text-muted-foreground mb-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+          >
+            Fostering growth for iOS, macOS, watchOS, tvOS & visionOS developers 🇮🇳
+          </motion.p>
         </motion.div>
       </div>
       
+      {/* Logo marquee at bottom */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 0.8 }}
+      >
+        <LogoMarquee />
+      </motion.div>
     </section>
   );
 };
