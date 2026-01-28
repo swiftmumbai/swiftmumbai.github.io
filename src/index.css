@@ -239,6 +239,12 @@
     @apply text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-semibold tracking-tight;
   }
 
+  /* Script/handwritten style for accent text */
+  .font-script {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-style: italic;
+  }
+
   .display-lg {
     @apply text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight;
   }
