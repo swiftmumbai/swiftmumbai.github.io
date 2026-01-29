@@ -6,7 +6,7 @@ import ThemeToggle from "./ThemeToggle";
 const navLinks = [
   { label: "About", href: "#about" },
   { label: "Events", href: "https://luma.com/user/swiftmumbai", external: true },
-  { label: "GitHub", href: "https://github.com/swiftmumbai", external: true },
+  { label: "Contact Us", href: "#contact" },
 ];
 
 const Navbar = () => {
