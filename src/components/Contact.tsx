@@ -1,47 +1,56 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import { Calendar, MessageCircle, Github, Twitter, Instagram, Youtube, Linkedin, Mail } from "lucide-react";
 
 const links = [
   {
     label: "Events",
     href: "https://luma.com/user/swiftmumbai",
     description: "Upcoming meetups on Luma",
+    icon: Calendar,
   },
   {
     label: "WhatsApp",
     href: "https://chat.whatsapp.com/Gszg4xLSDvTFhlfSGFfK0x",
     description: "Join the community group",
+    icon: MessageCircle,
   },
   {
     label: "GitHub",
     href: "https://github.com/swiftmumbai",
     description: "Open source projects",
+    icon: Github,
   },
   {
     label: "Twitter",
     href: "https://twitter.com/swift_mumbai",
     description: "@swift_mumbai",
+    icon: Twitter,
   },
   {
     label: "Instagram",
     href: "https://instagram.com/swift_mumbai",
     description: "@swift_mumbai",
+    icon: Instagram,
   },
   {
     label: "YouTube",
     href: "https://www.youtube.com/@SwiftMumbai",
     description: "Watch talks & sessions",
+    icon: Youtube,
   },
   {
     label: "LinkedIn",
     href: "https://linkedin.com/company/swift-mumbai",
     description: "Professional network",
+    icon: Linkedin,
   },
   {
     label: "Email",
     href: "mailto:helloswiftmumbai@gmail.com",
     description: "helloswiftmumbai@gmail.com",
+    icon: Mail,
   },
 ];
 
@@ -85,9 +94,12 @@ const Contact = () => {
               }}
             >
               <div className="flex items-center justify-between mb-2">
-                <span className="font-semibold text-foreground group-hover:text-primary transition-colors">
-                  {link.label}
-                </span>
+                <div className="flex items-center gap-3">
+                  <link.icon className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+                  <span className="font-semibold text-foreground group-hover:text-primary transition-colors">
+                    {link.label}
+                  </span>
+                </div>
                 <svg 
                   className="w-4 h-4 text-muted-foreground transition-all duration-300 group-hover:text-primary group-hover:translate-x-1" 
                   fill="none" 
