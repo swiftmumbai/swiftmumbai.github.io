@@ -50,7 +50,7 @@ const Contact = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="section-padding" ref={ref}>
+    <section id="contact" className="section-padding scroll-mt-24" ref={ref}>
       <div className="container mx-auto px-6">
         {/* Header */}
         <motion.div
