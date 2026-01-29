@@ -79,14 +79,12 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <a
-              href="https://luma.com/user/swiftmumbai"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#events"
               className="group inline-flex items-center justify-center px-8 py-4 bg-foreground text-background font-medium rounded-full transition-all duration-300 hover:scale-105 hover:shadow-apple-lg"
             >
               View Events
-              <svg className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              <svg className="w-4 h-4 ml-2 transition-transform group-hover:translate-y-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
               </svg>
             </a>
             <a
