@@ -56,7 +56,7 @@ const Events = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="section-padding bg-card/30" ref={ref}>
+    <section id="events" className="section-padding bg-card/30 scroll-mt-20" ref={ref}>
       <div className="container mx-auto px-6">
         {/* Header */}
         <motion.div
