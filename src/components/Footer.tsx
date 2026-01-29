@@ -7,8 +7,8 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Logo & Copyright */}
           <div className="flex items-center gap-3">
-            <div className="w-6 h-6 rounded-full bg-foreground overflow-hidden flex-shrink-0">
-              <img src={logo} alt="Swift Mumbai" className="w-full h-full object-cover opacity-80" />
+            <div className="w-6 h-6 rounded-full overflow-hidden flex-shrink-0">
+              <img src={logo} alt="Swift Mumbai" className="w-full h-full object-cover" />
             </div>
             <span className="text-sm text-muted-foreground">
               © {new Date().getFullYear()} Swift Mumbai. All rights reserved.
