@@ -27,7 +27,7 @@ const Navbar = () => {
       <motion.nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled 
-            ? "bg-background/80 backdrop-blur-apple border-b border-border/50" 
+            ? "liquid-glass-nav" 
             : "bg-transparent"
         }`}
         initial={{ y: -100 }}
@@ -68,7 +68,7 @@ const Navbar = () => {
                 href="https://chat.whatsapp.com/Gszg4xLSDvTFhlfSGFfK0x"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm font-medium px-4 py-2 rounded-full bg-foreground text-background transition-all hover:bg-foreground/90"
+                className="text-sm font-medium px-4 py-2 rounded-full liquid-glass-button text-foreground hover:text-primary"
               >
                 Join
               </a>
@@ -103,15 +103,15 @@ const Navbar = () => {
             transition={{ duration: 0.3 }}
           >
             <div 
-              className="absolute inset-0 bg-background/95 backdrop-blur-apple"
+              className="absolute inset-0 liquid-glass"
               onClick={() => setMobileMenuOpen(false)}
             />
             <motion.div
-              className="absolute top-20 left-6 right-6 bg-card border border-border rounded-2xl p-6 space-y-4"
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3 }}
+              className="absolute top-20 left-6 right-6 liquid-glass-card liquid-glass-specular p-6 space-y-4"
+              initial={{ opacity: 0, y: -20, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -20, scale: 0.95 }}
+              transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
             >
               {navLinks.map((link) => (
                 <a
@@ -129,7 +129,7 @@ const Navbar = () => {
                 href="https://chat.whatsapp.com/Gszg4xLSDvTFhlfSGFfK0x"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block text-center font-medium px-4 py-3 rounded-full bg-foreground text-background"
+                className="block text-center font-medium px-4 py-3 rounded-full bg-primary text-primary-foreground"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Join Community

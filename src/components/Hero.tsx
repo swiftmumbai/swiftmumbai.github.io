@@ -24,7 +24,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
         >
-          {/* Logo with glow */}
+          {/* Logo with liquid glass effect */}
           <motion.div
             className="relative inline-block mb-12"
             initial={{ scale: 0.8, opacity: 0 }}
@@ -32,11 +32,11 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
           >
             <div className="absolute inset-0 blur-3xl bg-primary/20 scale-150" />
-            <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full bg-background overflow-hidden">
+            <div className="relative w-28 h-28 md:w-36 md:h-36 rounded-full liquid-glass-tint liquid-glass-specular overflow-hidden p-2">
               <img
                 src={logo}
                 alt="Swift Mumbai"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover rounded-full"
               />
             </div>
           </motion.div>
@@ -71,7 +71,7 @@ const Hero = () => {
             Fostering growth for iOS, macOS, watchOS, tvOS, and visionOS developers 🇮🇳
           </motion.p>
           
-          {/* CTA Buttons */}
+          {/* CTA Buttons with liquid glass */}
           <motion.div
             className="flex flex-col sm:flex-row gap-4 justify-center"
             initial={{ opacity: 0, y: 20 }}
@@ -91,7 +91,7 @@ const Hero = () => {
               href="https://chat.whatsapp.com/Gszg4xLSDvTFhlfSGFfK0x"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-8 py-4 text-primary font-medium rounded-full border border-primary/30 transition-all duration-300 hover:bg-primary/10 hover:border-primary/50"
+              className="inline-flex items-center justify-center px-8 py-4 font-medium rounded-full liquid-glass-button liquid-glass-glow text-primary"
             >
               Join Community
             </a>

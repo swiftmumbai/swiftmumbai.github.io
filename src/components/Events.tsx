@@ -56,7 +56,7 @@ const Events = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="events" className="section-padding bg-card/30 scroll-mt-32" ref={ref}>
+    <section id="events" className="section-padding scroll-mt-32" ref={ref}>
       <div className="container mx-auto px-6">
         {/* Header */}
         <motion.div
@@ -74,12 +74,12 @@ const Events = () => {
           </p>
         </motion.div>
 
-        {/* Events Grid */}
+        {/* Events Grid with Liquid Glass */}
         <div className="max-w-6xl mx-auto space-y-8">
           {events.map((event, index) => (
             <motion.div
               key={event.title}
-              className="group relative rounded-3xl bg-background/50 border border-border/50 overflow-hidden transition-all duration-500 hover:bg-background hover:border-primary/20"
+              className="group relative rounded-3xl liquid-glass-card liquid-glass-glow overflow-hidden"
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ 
@@ -102,7 +102,7 @@ const Events = () => {
                 <div className="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
                   <div className="flex items-center gap-4 mb-4">
                     <span className="text-4xl">{event.icon}</span>
-                    <span className="px-3 py-1 text-xs font-medium text-primary bg-primary/10 rounded-full">
+                    <span className="px-3 py-1 text-xs font-medium text-primary liquid-glass-button">
                       {event.highlight}
                     </span>
                   </div>
