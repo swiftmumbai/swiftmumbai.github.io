@@ -76,7 +76,7 @@ const Contact = () => {
           </p>
         </motion.div>
 
-        {/* Links Grid */}
+        {/* Links Grid with Liquid Glass */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
           {links.map((link, index) => (
             <motion.a
@@ -84,7 +84,7 @@ const Contact = () => {
               href={link.href}
               target={link.href.startsWith('mailto') ? undefined : '_blank'}
               rel={link.href.startsWith('mailto') ? undefined : 'noopener noreferrer'}
-              className="group p-6 rounded-2xl bg-card/50 border border-border/50 transition-all duration-500 hover:bg-card hover:border-primary/30"
+              className="group p-6 rounded-2xl liquid-glass-card liquid-glass-glow"
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ 

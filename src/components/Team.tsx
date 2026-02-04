@@ -86,12 +86,12 @@ const Team = () => {
                 {/* Glow effect on hover */}
                 <div className="absolute inset-0 rounded-full bg-gradient-swift opacity-0 blur-xl transition-opacity duration-500 group-hover:opacity-40" />
                 
-                {/* Avatar */}
-                <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-border/50 transition-colors duration-500 group-hover:border-primary/30">
+                {/* Avatar with Liquid Glass */}
+                <div className="relative w-full h-full rounded-full overflow-hidden liquid-glass-tint p-1 transition-all duration-500 group-hover:shadow-glow-sm">
                   <img 
                     src={member.image} 
                     alt={member.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover rounded-full"
                   />
                 </div>
               </div>

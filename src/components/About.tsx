@@ -48,12 +48,12 @@ const About = () => {
           </p>
         </motion.div>
 
-        {/* Cards Grid */}
+        {/* Cards Grid with Liquid Glass */}
         <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {activities.map((item, index) => (
             <motion.div
               key={item.title}
-              className="group relative p-8 rounded-3xl bg-card/50 border border-border/50 transition-all duration-500 hover:bg-card hover:border-border"
+              className="group relative p-8 rounded-3xl liquid-glass-card liquid-glass-glow"
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ 
