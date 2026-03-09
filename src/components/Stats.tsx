@@ -3,10 +3,9 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 
 const stats = [
-  { value: "800+", label: "Developers" },
-  { value: "19+", label: "Meetups" },
-  { value: "120+", label: "Peak Attendance" },
-  { value: "13+", label: "Sip N Swift Sessions" },
+  { value: "2000+", label: "Developers" },
+  { value: "30+", label: "Meetups" },
+  { value: "20+", label: "Sip N Swift Sessions" },
 ];
 
 const Stats = () => {
