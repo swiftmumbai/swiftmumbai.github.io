@@ -11,14 +11,14 @@ import nishantImg from "@/assets/team/nishant.png";
 const team = [
   {
     name: "Yogesh Singh",
-    title: "Originator",
+    title: "The Originator",
     image: yogeshImg,
     twitter: "https://x.com/_yogeshsingh",
     linkedin: "https://www.linkedin.com/in/yogeshsingh2810/",
   },
   {
     name: "Akanksha Sharma",
-    title: "Senior Madam / SuperMom",
+    title: "Senior Madam + SuperMom",
     image: akanshaImg,
     twitter: "https://x.com/akanksharmaa",
     linkedin: "https://www.linkedin.com/in/akanksharmaa/",
@@ -39,7 +39,7 @@ const team = [
   },
   {
     name: "Nishant Desai",
-    title: "Human LLM / Tech Legend",
+    title: "The Human LLM",
     image: nishantImg,
     twitter: "https://x.com/nish_desai",
     linkedin: "https://www.linkedin.com/in/nishantdesai1/",
