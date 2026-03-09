@@ -11,9 +11,11 @@ describe("index.html metadata", () => {
     const ogDescription = indexHtml.match(/<meta\s+property="og:description"\s+content="([^"]+)"/)?.[1];
 
     expect(title, "expected index.html to include a title tag").toBe(
-      "Swift Mumbai | Apple Platform Developer Community",
+      "Swift Mumbai | India's Premier Apple Platform Developer Community",
     );
-    expect(description).toBe("Community for developers, designers, indies, and students since 2017.");
+    expect(description).toBe(
+      "A community for developers, designers, indie makers, and students since 2017.",
+    );
     expect(ogDescription).toBe(description);
     expect(indexHtml).toContain('name="theme-color" content="#f46e2f"');
     expect(indexHtml).toContain('rel="canonical" href="https://swiftmumbai.github.io/"');
