@@ -1,34 +1,7 @@
 {
   "permissions": {
     "allow": [
-      "Bash(bun run dev)",
-      "Bash(npm run dev)",
-      "Bash(brew install oven-sh/bun/bun)",
-      "Bash(/opt/homebrew/bin/bun run dev)",
-      "Bash(/opt/homebrew/bin/bun install)",
-      "Bash(/opt/homebrew/bin/bun pm bin -g)",
-      "Bash(/opt/homebrew/bin/bun install -g vite)",
-      "WebFetch(domain:www.instagram.com)",
-      "Bash(curl -s -L -H \"User-Agent: Mozilla/5.0 \\(Macintosh; Intel Mac OS X 10_15_7\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36\" \"https://www.instagram.com/p/DUPl2Q8jBfpd-WQFcRoqjztTABf9rQoH7lsW3A0/\")",
-      "Bash(curl -s -L -H \"User-Agent: Mozilla/5.0 \\(Macintosh; Intel Mac OS X 10_15_7\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36\" \"https://www.instagram.com/p/C50NLLKofzF/\")",
-      "Bash(curl -s -L -D - -H \"User-Agent: Mozilla/5.0 \\(Macintosh; Intel Mac OS X 10_15_7\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36\" \"https://www.instagram.com/p/C50NLLKofzF/\")",
-      "Bash(curl -s \"https://api.instagram.com/oembed/?url=https://www.instagram.com/p/C50NLLKofzF/\")",
-      "Bash(python3 -m json.tool)",
-      "Bash(curl -v \"https://api.instagram.com/oembed/?url=https://www.instagram.com/p/C50NLLKofzF/\")",
-      "Bash(curl -s -o /dev/null -w \"%{http_code} %{redirect_url}\" -L \"https://www.instagram.com/p/C50NLLKofzF/media/?size=l\")",
-      "Bash(file /Users/yogesh/Documents/Programming/swiftmumbai/src/assets/instagram/post*.jpg)",
-      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8080/)",
-      "Bash(sips -s format png -z 180 180 /Users/yogesh/Documents/Programming/swiftmumbai/src/assets/swift-mumbai-logo.png --out /Users/yogesh/Documents/Programming/swiftmumbai/public/apple-touch-icon.png)",
-      "Bash(sips -s format png -z 32 32 /Users/yogesh/Documents/Programming/swiftmumbai/src/assets/swift-mumbai-logo.png --out /Users/yogesh/Documents/Programming/swiftmumbai/public/favicon-32.png)",
-      "Bash(sips -s format png -z 16 16 /Users/yogesh/Documents/Programming/swiftmumbai/src/assets/swift-mumbai-logo.png --out /Users/yogesh/Documents/Programming/swiftmumbai/public/favicon-16.png)",
-      "Bash(python3 -c \"from PIL import Image; print\\(''Pillow available''\\)\")",
-      "Bash(pip3 install Pillow)",
-      "Bash(python3 -c \"import sys; print\\(sys.executable\\)\")",
-      "Bash(pip3 show Pillow)",
-      "Bash(~/.pyenv/versions/3.12.12/bin/python3 -c \":*)",
-      "Bash(~/.pyenv/versions/3.12.12/bin/python3:*)",
-      "Bash(git add index.html public/favicon.ico public/apple-touch-icon.png public/favicon-16.png public/favicon-32.png src/assets/instagram/ src/assets/sponsors/ src/components/Instagram.tsx src/components/Contact.tsx src/components/Sponsors.tsx src/pages/Index.tsx)",
-      "Bash(git commit:*)"
+
     ]
   }
 }

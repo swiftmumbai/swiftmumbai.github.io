@@ -19,7 +19,7 @@ const events = [
   },
   {
     title: "Spatially Xtended",
-    description: "India's biggest visionOS meetup with 100+ attendees. Focusing on Apple Vision Pro, Spatial Computing and visionOS.",
+    description: "India's biggest visionOS meetup with 120+ attendees. Focusing on Apple Vision Pro, Spatial Computing and visionOS.",
     highlight: "120+ Attendees",
     icon: "🥽",
     collab: "KJ Somaiya • XDG Mumbai • Parallax Labs",
