@@ -7,6 +7,7 @@ import buildBeyondImg from "@/assets/events/build-beyond-screens.png";
 import sipnswiftImg from "@/assets/events/sipnswift.png";
 import wwdcImg from "@/assets/events/wwdc25watchparty.png";
 import gdgCollabImg from "@/assets/events/gdg-collab.png";
+import haxnationImg from "@/assets/events/haxnation-collab.png";
 
 const events = [
   {
