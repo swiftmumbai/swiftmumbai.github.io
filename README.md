@@ -1,6 +1,6 @@
 # Swift Mumbai
 
-India's premier Apple platform developers community since 2018.
+India's premier Apple platform developers community since 2017.
 
 **Live site**: [swiftmumbai.in](https://swiftmumbai.in)
 
