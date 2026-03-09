@@ -5,6 +5,7 @@ import { useRef } from "react";
 const stats = [
   { value: "2000+", label: "Developers" },
   { value: "30+", label: "Meetups" },
+  { value: "4", label: "Annual International Conferences" },
   { value: "20+", label: "Sip N Swift Sessions" },
 ];
 
