@@ -28,7 +28,7 @@ const events = [
   {
     title: "Sip N Swift",
     description: "Invite-only meetups for loyal attendees and community contributors. We banter, sip coffee, and have swift conversations.",
-    highlight: "13+ Sessions",
+    highlight: "15+ Sessions",
     icon: "☕",
     collab: "Exclusive Community Event",
     image: sipnswiftImg,
