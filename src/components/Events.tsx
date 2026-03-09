@@ -7,6 +7,7 @@ import buildBeyondImg from "@/assets/events/build-beyond-screens.png";
 import sipnswiftImg from "@/assets/events/sipnswift.png";
 import wwdcImg from "@/assets/events/wwdc25watchparty.png";
 import gdgCollabImg from "@/assets/events/gdg-collab.png";
+import haxnationImg from "@/assets/events/haxnation-collab.png";
 
 const events = [
   {
@@ -28,10 +29,18 @@ const events = [
   {
     title: "Sip N Swift",
     description: "Invite-only meetups for loyal attendees and community contributors. We banter, sip coffee, and have swift conversations.",
-    highlight: "15+ Sessions",
+    highlight: "20+ Sessions",
     icon: "☕",
     collab: "Exclusive Community Event",
     image: sipnswiftImg,
+  },
+  {
+    title: "Haxnation × Swift Mumbai",
+    description: "A cross-community collaboration on Mobile Application Security, co-hosted with Haxnation Mumbai, FlutterFlow Mumbai & Flutter Mumbai at TalaKunchi Networks.",
+    highlight: "Collaboration",
+    icon: "🔐",
+    collab: "Haxnation Mumbai • FlutterFlow Mumbai • Flutter Mumbai",
+    image: haxnationImg,
   },
   {
     title: "WWDC Watch Party 2025",
