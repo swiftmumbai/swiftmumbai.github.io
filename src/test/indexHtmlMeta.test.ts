@@ -7,11 +7,14 @@ describe("index.html metadata", () => {
     const indexHtmlPath = path.resolve(process.cwd(), "index.html");
     const indexHtml = readFileSync(indexHtmlPath, "utf8");
     const title = indexHtml.match(/<title>([^<]+)<\/title>/)?.[1]?.trim();
+    const description = indexHtml.match(/<meta\s+name="description"\s+content="([^"]+)"/)?.[1];
+    const ogDescription = indexHtml.match(/<meta\s+property="og:description"\s+content="([^"]+)"/)?.[1];
 
     expect(title, "expected index.html to include a title tag").toBe(
-      "Swift Mumbai | India's Premier Apple Platform Developer Community",
+      "Swift Mumbai | Apple Platform Developer Community",
     );
-    expect(indexHtml).toContain('name="description"');
+    expect(description).toBe("Community for developers, designers, indies, and students since 2017.");
+    expect(ogDescription).toBe(description);
     expect(indexHtml).toContain('name="theme-color" content="#f46e2f"');
     expect(indexHtml).toContain('rel="canonical" href="https://swiftmumbai.github.io/"');
     expect(indexHtml).toContain('property="og:title"');
