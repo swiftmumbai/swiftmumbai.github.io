@@ -25,7 +25,7 @@ const Stats = () => {
           animate={isInView ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
         >
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 lg:gap-4">
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
