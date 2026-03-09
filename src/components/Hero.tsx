@@ -68,7 +68,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
           >
-            Fostering growth for iOS, macOS, watchOS, tvOS, and visionOS developers 🇮🇳
+            Fostering growth for iOS, macOS, visionOS & the open source Swift language engineers from India 🇮🇳
           </motion.p>
           
           {/* CTA Buttons with liquid glass */}

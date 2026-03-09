@@ -12,7 +12,7 @@ const events = [
   {
     title: "Build Beyond Screens",
     description: "Student-focused meetups covering Swift Student Challenge, AI, VR, and AR development.",
-    highlight: "120+ Attendees",
+    highlight: "150+ Attendees",
     icon: "🎓",
     collab: "Atlas SkillTech University • XDG Mumbai",
     image: buildBeyondImg,
@@ -20,7 +20,7 @@ const events = [
   {
     title: "Spatially Xtended",
     description: "India's biggest visionOS meetup with 100+ attendees. Focusing on Apple Vision Pro, Spatial Computing and visionOS.",
-    highlight: "100+ Attendees",
+    highlight: "120+ Attendees",
     icon: "🥽",
     collab: "KJ Somaiya • XDG Mumbai • Parallax Labs",
     image: spatiallyImg,
@@ -28,7 +28,7 @@ const events = [
   {
     title: "Sip N Swift",
     description: "Invite-only meetups for loyal attendees and community contributors. We banter, sip coffee, and have swift conversations.",
-    highlight: "13+ Sessions",
+    highlight: "20+ Sessions",
     icon: "☕",
     collab: "Exclusive Community Event",
     image: sipnswiftImg,
