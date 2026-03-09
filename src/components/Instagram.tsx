@@ -2,6 +2,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useCallback, useEffect, useState } from "react";
 import { Instagram as InstagramIcon, ArrowLeft, ArrowRight } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
+import { cn } from "@/lib/utils";
 
 import post1Img from "@/assets/instagram/post1.jpg";
 import post2Img from "@/assets/instagram/post2.jpg";
@@ -158,11 +159,12 @@ const Instagram = () => {
               <button
                 key={index}
                 onClick={() => emblaApi?.scrollTo(index)}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                className={cn(
+                  "h-2 rounded-full transition-all duration-300",
                   index === selectedIndex
                     ? "bg-primary w-6"
-                    : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
-                }`}
+                    : "w-2 bg-muted-foreground/30 hover:bg-muted-foreground/50"
+                )}
                 aria-label={`Go to slide ${index + 1}`}
               />
             ))}
