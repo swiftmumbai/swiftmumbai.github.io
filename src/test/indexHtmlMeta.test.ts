@@ -14,7 +14,7 @@ describe("index.html metadata", () => {
       "Swift Mumbai | India's Premier Apple Platform Developer Community",
     );
     expect(description).toBe(
-      "A community for developers, designers, indie makers, and students since 2017.",
+      "A community for developers, designers, indies, and students since 2017.",
     );
     expect(ogDescription).toBe(description);
     expect(indexHtml).toContain('name="theme-color" content="#f46e2f"');
