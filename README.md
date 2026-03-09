@@ -2,7 +2,7 @@
 
 India's premier Apple platform developers community since 2018.
 
-**Live site**: [swiftmumbai.github.io](https://swiftmumbai.github.io)
+**Live site**: [swiftmumbai.in](https://swiftmumbai.in)
 
 ## Tech Stack
 
