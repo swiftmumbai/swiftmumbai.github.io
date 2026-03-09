@@ -2,12 +2,15 @@ import { describe, expect, it } from "vitest";
 import { readFileSync } from "node:fs";
 import path from "node:path";
 
-const indexHtmlPath = path.resolve(__dirname, "../../index.html");
-const indexHtml = readFileSync(indexHtmlPath, "utf8");
-
 describe("index.html metadata", () => {
   it("defines the core SEO and social preview tags", () => {
-    expect(indexHtml).toContain('<title>Swift Mumbai | India\'s Premier Apple Platform Developer Community</title>');
+    const indexHtmlPath = path.resolve(process.cwd(), "index.html");
+    const indexHtml = readFileSync(indexHtmlPath, "utf8");
+    const title = indexHtml.match(/<title>([^<]+)<\/title>/)?.[1]?.trim();
+
+    expect(title, "expected index.html to include a title tag").toBe(
+      "Swift Mumbai | India's Premier Apple Platform Developer Community",
+    );
     expect(indexHtml).toContain('name="description"');
     expect(indexHtml).toContain('name="theme-color" content="#f46e2f"');
     expect(indexHtml).toContain('rel="canonical" href="https://swiftmumbai.github.io/"');
