@@ -3,10 +3,9 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 
 const stats = [
-  { value: "800+", label: "Developers" },
-  { value: "19+", label: "Meetups" },
-  { value: "120+", label: "Peak Attendance" },
-  { value: "13+", label: "Sip N Swift Sessions" },
+  { value: "2000+", label: "Developers" },
+  { value: "30+", label: "Meetups" },
+  { value: "20+", label: "Sip N Swift Sessions" },
 ];
 
 const Stats = () => {
@@ -26,7 +25,7 @@ const Stats = () => {
           animate={isInView ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
         >
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 lg:gap-4">
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
