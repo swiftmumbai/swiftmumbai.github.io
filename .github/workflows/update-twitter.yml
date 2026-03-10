@@ -1,0 +1,36 @@
+name: Update Twitter Posts
+
+on:
+  schedule:
+    - cron: "0 6 * * 1" # Every Monday at 6:00 AM UTC
+  workflow_dispatch: # Manual trigger from Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  fetch-tweets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Fetch latest tweets
+        env:
+          TWITTER_BEARER_TOKEN: ${{ secrets.TWITTER_BEARER_TOKEN }}
+        run: node scripts/fetch-twitter.mjs
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/twitter/
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: update Twitter posts [automated]"
+            git push
+          fi

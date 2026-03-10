@@ -12,7 +12,8 @@ import post5Img from "@/assets/instagram/post5.jpg";
 import post6Img from "@/assets/instagram/post6.jpg";
 import post7Img from "@/assets/instagram/post7.jpg";
 
-const posts = [
+// Pinned posts — always shown first, never removed or reordered
+const pinnedPosts = [
   {
     image: post1Img,
     url: "https://www.instagram.com/p/DUPl2Q8jBfpd-WQFcRoqjztTABf9rQoH7lsW3A0/",
@@ -25,6 +26,10 @@ const posts = [
     image: post3Img,
     url: "https://www.instagram.com/p/DLSPjC6olQ4/",
   },
+];
+
+// Fallback posts shown when the dynamic feed isn't configured yet
+const fallbackPosts = [
   {
     image: post4Img,
     url: "https://www.instagram.com/p/DGX-T3RTbzM/",
@@ -43,12 +48,43 @@ const posts = [
   },
 ];
 
+interface DynamicPost {
+  id: string;
+  image: string;
+  url: string;
+  timestamp: string;
+}
+
 const Instagram = () => {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);
+  const [dynamicPosts, setDynamicPosts] = useState<DynamicPost[]>([]);
+  const [useFallback, setUseFallback] = useState(true);
+
+  // Fetch dynamic posts at runtime
+  useEffect(() => {
+    fetch("/instagram/posts.json")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data?.posts?.length) {
+          setDynamicPosts(data.posts);
+          setUseFallback(false);
+        }
+      })
+      .catch(() => {
+        // Fail silently — fallback posts still show
+      });
+  }, []);
+
+  const allPosts = [
+    ...pinnedPosts,
+    ...(useFallback
+      ? fallbackPosts
+      : dynamicPosts.map((p) => ({ image: p.image, url: p.url }))),
+  ];
 
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: "start",
@@ -76,6 +112,13 @@ const Instagram = () => {
       emblaApi.off("reInit", onSelect);
     };
   }, [emblaApi, onSelect]);
+
+  // Re-initialize carousel when dynamic posts load
+  useEffect(() => {
+    if (emblaApi && dynamicPosts.length > 0) {
+      emblaApi.reInit();
+    }
+  }, [emblaApi, dynamicPosts]);
 
   const scrollSnaps = emblaApi?.scrollSnapList() ?? [];
 
@@ -108,9 +151,9 @@ const Instagram = () => {
             {/* Embla viewport */}
             <div className="overflow-hidden rounded-2xl" ref={emblaRef}>
               <div className="flex -ml-4">
-                {posts.map((post, index) => (
+                {allPosts.map((post, index) => (
                   <div
-                    key={index}
+                    key={post.url}
                     className="min-w-0 shrink-0 grow-0 basis-full md:basis-1/3 pl-4"
                   >
                     <a
