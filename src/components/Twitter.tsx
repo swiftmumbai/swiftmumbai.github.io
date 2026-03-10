@@ -10,7 +10,8 @@ import { cn } from "@/lib/utils";
 // e.g. https://x.com/swift_mumbai/status/1234567890 → "1234567890"
 const PINNED_TWEET_IDS: string[] = [
   "1786617284967923988",
-  "1926202475935154184"
+  "1926202475935154184",
+  "1932126313151947223"
 ];
 
 interface DynamicTweet {
