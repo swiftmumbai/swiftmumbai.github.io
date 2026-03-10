@@ -5,6 +5,7 @@ import About from "@/components/About";
 import Events from "@/components/Events";
 import Team from "@/components/Team";
 import Instagram from "@/components/Instagram";
+import Twitter from "@/components/Twitter";
 import Sponsors from "@/components/Sponsors";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -19,6 +20,7 @@ const Index = () => {
       <Events />
       <Team />
       <Instagram />
+      <Twitter />
       <Sponsors />
       <Contact />
       <Footer />
