@@ -1,8 +1,6 @@
 name: Update Twitter Posts
 
 on:
-  schedule:
-    - cron: "0 6 * * 1" # Every Monday at 6:00 AM UTC
   workflow_dispatch: # Manual trigger from Actions tab
 
 permissions:
